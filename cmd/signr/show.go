@@ -48,8 +48,8 @@ var showCmd = &cobra.Command{
 		hexPub = hex.EncodeToString(schnorr.SerializePubKey(pub))
 		nsec, _ = nostr.SecretKeyToNsec(sec)
 		npub, _ = nostr.PublicKeyToNpub(pub)
-		fmt.Printf("secret key:     %s\npublic key:     %s\n", nsec, npub)
-		fmt.Printf("hex secret key: %s\nhex public key: %s\n", hexSec, hexPub)
+		fmt.Printf("SIGNR_SECRET_KEY=%s\nSIGNR_PUBLIC_KEY=%s\n", nsec, npub)
+		fmt.Printf("SIGNR_HEX_SECRET_KEY=%s\nSIGNR_HEX_PUBLIC_KEY=%s\n", hexSec, hexPub)
 	},
 }
 
